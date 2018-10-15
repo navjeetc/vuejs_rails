@@ -5,6 +5,19 @@
   <div id="employees">
     <p>{{ message }}</p>
     <!-- <button @click="onClick">click this</button> -->
+    <div>
+      Employees:
+      <ul v-for="employee in empList">
+        <li>
+          {{ employee.first_name }} {{ employee.last_name }} Dept. {{ employee.department.name }}
+          Projects:<ul v-for="project in employee.projects">
+            <li>
+              {{ project.name }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -13,7 +26,8 @@ export default {
   props: ['employeeList'],
   data: function () {
     return {
-      message: "Hello employees!"
+      message: "Hello employees!",
+      empList: JSON.parse(erb('employeeList'))
     }
   }, 
   watch: {

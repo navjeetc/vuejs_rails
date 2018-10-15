@@ -63,3 +63,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'webpacker', '~> 3.5.5'
 gem 'vuejs', '> 1.0.39'
+gem 'active_model_serializers'

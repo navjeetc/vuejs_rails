@@ -21,11 +21,14 @@
     <%= form.text_field :last_name %>
   </div>
 
-  <div class="field">
-    <%= form.label :refs %>
-    <%= form.text_field :refs %>
+  <div>
+    <%=  form.select 'department_id',
+                    options_for_select(Department.all.collect{ |u| [u.name, u.id] }) %>
   </div>
-
+  <div>
+    Projects: <%=  form.collection_check_boxes :project_ids, Project.all,
+                                               :id, :name %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>
