@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b881b78-fa4c-4d0f-885f-d2ad5108437d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -36,6 +31,7 @@
           <entry key="Gemfile" value="1" />
           <entry key="coffee" value="1" />
           <entry key="erb" value="7" />
+          <entry key="gitignore" value="1" />
           <entry key="jbuilder" value="2" />
           <entry key="js" value="10" />
           <entry key="json" value="1" />
@@ -51,7 +47,7 @@
           <entry key="HTML" value="4" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="10" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="RHTML" value="7" />
           <entry key="Ruby" value="14" />
         </counts>
@@ -63,6 +59,7 @@
         <counts>
           <entry key="HTML" value="63" />
           <entry key="JavaScript" value="29" />
+          <entry key="PLAIN_TEXT" value="74" />
           <entry key="RHTML" value="149" />
           <entry key="Ruby" value="178" />
         </counts>
@@ -70,8 +67,10 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="erb" value="149" />
+          <entry key="gitignore" value="22" />
           <entry key="js" value="29" />
           <entry key="rb" value="178" />
+          <entry key="txt" value="52" />
           <entry key="vue" value="63" />
         </counts>
       </usages-collector>
@@ -92,11 +91,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/javascript/parts/employees.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
+            <state relative-caret-position="95">
               <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -137,6 +145,7 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/employees/index.html.erb" />
         <option value="$PROJECT_DIR$/app/javascript/parts/employees.vue" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -245,32 +254,6 @@
             <path>
               <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vuejs (v1.1.0.beta9, RVM: ruby-2.5.1) [gem]" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vuejs (v1.1.0.beta9, RVM: ruby-2.5.1) [gem]" type="70bed36:NamedLibraryElementNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vuejs (v1.1.0.beta9, RVM: ruby-2.5.1) [gem]" type="70bed36:NamedLibraryElementNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="vuejs (v1.1.0.beta9, RVM: ruby-2.5.1) [gem]" type="70bed36:NamedLibraryElementNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,12 +395,20 @@
       <workItem from="1538448034456" duration="379000" />
       <workItem from="1538893833378" duration="525000" />
       <workItem from="1539233150443" duration="902000" />
-      <workItem from="1539532811370" duration="4736000" />
+      <workItem from="1539532811370" duration="4973000" />
     </task>
+    <task id="LOCAL-00001" summary="Added employee, project and department entities">
+      <created>1539571690730</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1539571690730</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6542000" />
+    <option name="totallyTimeSpent" value="6779000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -435,8 +426,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32893" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.38441214" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32893" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32893" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -450,6 +441,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added employee, project and department entities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added employee, project and department entities" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/javascript/packs/hello_vue.js">
@@ -635,8 +630,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/parts/employees.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
+        <state relative-caret-position="95">
           <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
         </state>
       </provider>
     </entry>
