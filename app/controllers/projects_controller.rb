@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
+# Provides project related actions
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: %i[show edit update destroy]
 
   PER_PAGE = 3
 
@@ -8,13 +11,15 @@ class ProjectsController < ApplicationController
   def index
     page_params = params[:page] || 1
     field = params[:sort_by] || 'name'
-    @projects = Project.order(Arel.sql("#{field}"))
+    descending = params[:descending] || false
+    order = descending ? "desc" : "asc"
+    @projects = Project.order(Arel.sql("#{field} #{order}"))
                        .paginate(page: page_params, per_page: PER_PAGE)
     @pagination = { page: page_params, pages: pages }
     respond_to do |format|
       format.html
-      format.json do  render json: @projects,
-                             pagination: { page: page_params, pages: pages }
+      format.json do  render json: { data: @projects,
+                             pagination: { page: page_params.to_i, pages: pages }}
       end
     end
   end

@@ -18,6 +18,7 @@
               :items="projects"
               hide-actions
               class="elevation-1"
+              :pagination.sync="pagination"
       >
         <template slot="items" slot-scope="props">
           <td>{{ props.item.name }}</td>
@@ -54,19 +55,21 @@
       }
     },
     methods: {
-      //uncomment the <button  @click="onClick"> at your template
       next: function(page){
-        console.log("getting next page:", page)
-        axios.get('/projects.json', { params: { page: page }})
+        let self = this
+        let pagination = this.pagination
+        axios.get('/projects.json', { params: {
+                page: page,
+                sort_by: pagination.sortBy,
+                descending: pagination.descending }})
             .then(response => {
-                // JSON responses are automatically parsed.
-                this.projects = response.data
+                self.projects = response.data.data
+                self.pagination.page = response.data.pagination.page
+                self.pagination.pages = response.data.pagination.pages
             })
             .catch(e => {
                 console.log(e)
             })
-
-          return this.projects
       }
     },
     computed: {
