@@ -1,10 +1,22 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
+  PER_PAGE = 3
+
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    page_params = params[:page] || 1
+    field = params[:sort_by] || 'name'
+    @projects = Project.order(Arel.sql("#{field}"))
+                       .paginate(page: page_params, per_page: PER_PAGE)
+    @pagination = { page: page_params, pages: pages }
+    respond_to do |format|
+      format.html
+      format.json do  render json: @projects,
+                             pagination: { page: page_params, pages: pages }
+      end
+    end
   end
 
   # GET /projects/1
@@ -62,13 +74,19 @@ class ProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+  def pages
+    (@projects.total_entries / PER_PAGE.to_f).ceil
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :started_on, :ended_on)
+      params.require(:project).permit(:name, :description,
+                                      :started_on, :ended_on)
     end
 end

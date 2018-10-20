@@ -9,8 +9,11 @@ import App from '../parts/employees.vue'
 
 Vue.use(TurbolinksAdapter)
 document.addEventListener('turbolinks:load', () => {
-    const employees = new Vue({
-      render: h => h(App)
-    }).$mount('#employees')
-    console.log({employees})
+    let employees_dom = document.querySelector("#employees")
+    if (employees_dom !== null) {
+        const employees = new Vue({
+            render: h => h(App)
+        }).$mount('#employees')
+    }
+
 })

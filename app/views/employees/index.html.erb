@@ -17,10 +17,10 @@
   </tbody>
 
   <div id="employees">
-
+    <%= vue_component "employees", employeeList:  @employees.to_json %>
   </div>
 
-  <%= vue_component "employees", employeeList:  @employees.to_json %>
+
 </table>
 
 <br>
