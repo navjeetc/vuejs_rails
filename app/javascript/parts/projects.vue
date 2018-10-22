@@ -18,6 +18,7 @@
               :items="projects"
               hide-actions
               class="elevation-1"
+              :total-items="totalProjects"
               :pagination.sync="pagination"
       >
         <template slot="items" slot-scope="props">
@@ -37,6 +38,7 @@
     data: function () {
       return {
         message: "Hello projects!",
+        totalProjects: JSON.parse(erb('total_items')),
         pagination: JSON.parse(erb('pagination')),
         projects: JSON.parse(erb('projects')),
           headers: [
@@ -50,20 +52,20 @@
       }
     },
     watch: {
-      onCreated: function(response){
-        this.items = response.data
-      }
+
     },
     methods: {
       next: function(page){
+        console.log("in next")
         let self = this
         let pagination = this.pagination
-        axios.get('/projects.json', { params: {
+        return axios.get('/projects.json', { params: {
                 page: page,
                 sort_by: pagination.sortBy,
                 descending: pagination.descending }})
             .then(response => {
                 self.projects = response.data.data
+                // may need to set totalItems also
                 self.pagination.page = response.data.pagination.page
                 self.pagination.pages = response.data.pagination.pages
             })
@@ -73,7 +75,6 @@
       }
     },
     computed: {
-
     },
     // components: {},
     // mixins: [],

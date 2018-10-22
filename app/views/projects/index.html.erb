@@ -2,6 +2,7 @@
 
 <h1>Projects</h1>
 <%= vue_component 'project', projects: @projects.to_json,
+                             total_items: @total_items,
                              pagination: @pagination.to_json %>
 
 <div id="projects">
