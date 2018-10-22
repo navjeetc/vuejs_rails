@@ -18,7 +18,6 @@
               :items="projects"
               hide-actions
               class="elevation-1"
-              :custom-sort="sortProjects"
               :total-items="totalProjects"
               :pagination.sync="pagination"
       >
@@ -75,12 +74,8 @@
         }
     },
     methods: {
-      sortProjects: function(items, index, isDescending){
-        console.log(index)
-        console.log(isDescending)
-        return items
-      },
       next: function(page){
+        console.log("in next")
         let self = this
         let pagination = this.pagination
         return axios.get('/projects.json', { params: {
