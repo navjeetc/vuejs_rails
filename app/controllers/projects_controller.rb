@@ -13,8 +13,8 @@ class ProjectsController < ApplicationController
     page_params = JSON.parse(page_params) if request.format.json?
     page_params = page_params["page"] if page_params.is_a? Hash
     field = params[:sort_by] || 'name'
-    descending = params[:descending] || false
-    order = descending ? "desc" : "asc"
+    descending = params[:descending]
+    order = descending == "true" ? "desc" : "asc"
     @projects = Project.order(Arel.sql("#{field} #{order}"))
                        .paginate(page: page_params, per_page: PER_PAGE)
     @pagination = { page: page_params, pages: pages }

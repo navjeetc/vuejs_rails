@@ -18,6 +18,7 @@
               :items="projects"
               hide-actions
               class="elevation-1"
+              :custom-sort="sortProjects"
               :total-items="totalProjects"
               :pagination.sync="pagination"
       >
@@ -37,26 +38,49 @@
     // props: {},
     data: function () {
       return {
-        message: "Hello projects!",
+        message: "",
         totalProjects: JSON.parse(erb('total_items')),
         pagination: JSON.parse(erb('pagination')),
         projects: JSON.parse(erb('projects')),
-          headers: [
-              {
-                  text: 'Name',
-                  align: 'left',
-                  value: 'name'
-              },
-              { text: 'Description', value: 'description' }
-          ],
+        headers: [
+            {
+                text: 'Name',
+                align: 'left',
+                value: 'name'
+            },
+            { text: 'Description', value: 'description', align: 'left'}
+        ],
       }
     },
     watch: {
-
+        "pagination": {
+            handler () {
+                let self = this
+                console.log("Pagination:", this.pagination)
+                let pagination = this.pagination
+                return axios.get('/projects.json', { params: {
+                        page: pagination.page,
+                        sort_by: pagination.sortBy,
+                        descending: pagination.descending }})
+                    .then(response => {
+                        self.projects = response.data.data
+                        // may need to set totalItems also
+                        self.pagination.page = response.data.pagination.page
+                        self.pagination.pages = response.data.pagination.pages
+                    })
+                    .catch(e => {
+                        console.log(e)
+                    })
+            }
+        }
     },
     methods: {
+      sortProjects: function(items, index, isDescending){
+        console.log(index)
+        console.log(isDescending)
+        return items
+      },
       next: function(page){
-        console.log("in next")
         let self = this
         let pagination = this.pagination
         return axios.get('/projects.json', { params: {

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8b881b78-fa4c-4d0f-885f-d2ad5108437d" name="Default Changelist" comment="Trying to fix pagination issue&#10;&#10;* Getting &quot;No matching records found error&quot; on clicking&#10;  pagination link for next page">
+    <list default="true" id="8b881b78-fa4c-4d0f-885f-d2ad5108437d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/projects_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/projects_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/javascript/parts/projects.vue" beforeDir="false" afterPath="$PROJECT_DIR$/app/javascript/parts/projects.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/projects/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/index.html.erb" afterDir="false" />
     </list>
     <list id="301ed56f-47b7-402c-a89c-6fed05ccbbb7" name="tmp" comment="" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -63,11 +62,11 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1117" />
+          <entry key="HTML" value="1425" />
           <entry key="JavaScript" value="163" />
-          <entry key="PLAIN_TEXT" value="342" />
+          <entry key="PLAIN_TEXT" value="435" />
           <entry key="RHTML" value="525" />
-          <entry key="Ruby" value="976" />
+          <entry key="Ruby" value="1006" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -76,20 +75,20 @@
           <entry key="erb" value="525" />
           <entry key="gitignore" value="22" />
           <entry key="js" value="163" />
-          <entry key="rb" value="948" />
-          <entry key="txt" value="320" />
-          <entry key="vue" value="1117" />
+          <entry key="rb" value="978" />
+          <entry key="txt" value="413" />
+          <entry key="vue" value="1425" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/projects_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+            <state relative-caret-position="318">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -116,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/javascript/parts/projects.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+            <state relative-caret-position="185">
+              <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -136,6 +135,7 @@
       <find>vuet</find>
       <find>axios</find>
       <find>totalProjects</find>
+      <find>sortProjects</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,9 +168,9 @@
         <option value="$PROJECT_DIR$/app/javascript/packs/projects.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/serializers/project_serializer.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/projects_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/projects/index.html.erb" />
         <option value="$PROJECT_DIR$/app/javascript/parts/projects.vue" />
+        <option value="$PROJECT_DIR$/app/controllers/projects_controller.rb" />
       </list>
     </option>
   </component>
@@ -236,39 +236,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="javascript" type="462c0819:PsiDirectoryNode" />
               <item name="parts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuejs_rails" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="serializers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuejs_rails" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuejs_rails" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="employees" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuejs_rails" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="layouts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vuejs_rails" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vuejs_rails" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,7 +379,7 @@
       <workItem from="1538893833378" duration="525000" />
       <workItem from="1539233150443" duration="902000" />
       <workItem from="1539532811370" duration="10704000" />
-      <workItem from="1539986472102" duration="9382000" />
+      <workItem from="1539986472102" duration="11623000" />
     </task>
     <task id="LOCAL-00001" summary="Added employee, project and department entities">
       <created>1539571690730</created>
@@ -463,17 +430,24 @@
       <option name="project" value="LOCAL" />
       <updated>1540064530997</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Server side pagination works&#10;&#10;* Needed to set props total_items that should have total number&#10;  of results">
+      <created>1540171012534</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1540171012534</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21892000" />
+    <option name="totallyTimeSpent" value="24133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16881259" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16881259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -485,8 +459,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.17701453" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32893" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.31307793" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32893" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32893" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -509,7 +483,8 @@
     <MESSAGE value="Rubymine file" />
     <MESSAGE value="Rubymine files" />
     <MESSAGE value="Trying to fix pagination issue&#10;&#10;* Getting &quot;No matching records found error&quot; on clicking&#10;  pagination link for next page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix pagination issue&#10;&#10;* Getting &quot;No matching records found error&quot; on clicking&#10;  pagination link for next page" />
+    <MESSAGE value="Server side pagination works&#10;&#10;* Needed to set props total_items that should have total number&#10;  of results" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server side pagination works&#10;&#10;* Needed to set props total_items that should have total number&#10;  of results" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/javascript/app.vue">
@@ -778,13 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/projects_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -794,8 +762,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/parts/projects.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="67" column="50" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+        <state relative-caret-position="185">
+          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/projects_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
