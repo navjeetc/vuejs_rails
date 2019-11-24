@@ -4,7 +4,8 @@ class EmployeesController < ApplicationController
   # GET /employees
   # GET /employees.json
   def index
-    @employees = Employee.all
+    @employees = Employee.all.collect { |emp| EmployeeSerializer.new(emp) }
+    @empList = ['Navjeet','Noor']
   end
 
   # GET /employees/1
@@ -25,7 +26,6 @@ class EmployeesController < ApplicationController
   # POST /employees.json
   def create
     @employee = Employee.new(employee_params)
-
     respond_to do |format|
       if @employee.save
         format.html { redirect_to @employee, notice: 'Employee was successfully created.' }
@@ -63,12 +63,13 @@ class EmployeesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_employee
-      @employee = Employee.find(params[:id])
-    end
+  def set_employee
+    @employee = Employee.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def employee_params
-      params.require(:employee).permit(:first_name, :last_name, :refs)
-    end
+  def employee_params
+    params.require(:employee).permit(:first_name, :last_name, :department_id,
+                                     project_ids: [])
+  end
 end

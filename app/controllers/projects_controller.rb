@@ -1,10 +1,31 @@
+# frozen_string_literal: true
+
+# Provides project related actions
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: %i[show edit update destroy]
+
+  PER_PAGE = 3
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    page_params = params[:page] || 1
+    page_params = JSON.parse(page_params) if request.format.json?
+    page_params = page_params["page"] if page_params.is_a? Hash
+    field = params[:sort_by] || 'name'
+    descending = params[:descending]
+    order = descending == "true" ? "desc" : "asc"
+    @projects = Project.order(Arel.sql("#{field} #{order}"))
+                       .paginate(page: page_params, per_page: PER_PAGE)
+    @pagination = { page: page_params, pages: pages }
+    @total_items = @projects.total_entries
+    respond_to do |format|
+      format.html
+      format.json do  render json: { data: @projects,
+                                     total_items: @total_items,
+                             pagination: { page: page_params.to_i, pages: pages }}
+      end
+    end
   end
 
   # GET /projects/1
@@ -62,13 +83,19 @@ class ProjectsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
+  def pages
+    (@projects.total_entries / PER_PAGE.to_f).ceil
+  end
+
+  # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name, :started_on, :ended_on)
+      params.require(:project).permit(:name, :description,
+                                      :started_on, :ended_on)
     end
 end

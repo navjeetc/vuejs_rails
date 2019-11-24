@@ -13,7 +13,8 @@ export default {
   // props: {},
   data: function () {
     return {
-      message: "Hello products!"
+      message: "Hello products!",
+
     }
   }, 
   watch: {
